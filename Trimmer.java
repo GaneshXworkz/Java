@@ -8,8 +8,8 @@ class Trimmer{
 
 	public static void main(String[] args){
 		
-	System.out.println("brand       :" +brand );
-	System.out.println("color       :" +color);
+	System.out.println("brand name      :" +brand );
+	System.out.println("color  brand     :" +color);
 	System.out.println("price       :" +price);
 	System.out.println("working     :" +working);
 	System.out.println("warrenty    :" +warrenty);	
