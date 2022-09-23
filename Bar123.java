@@ -3,6 +3,8 @@ class Bar123{
 	
 	//declaration of variable
 	static String barname;
+	static String gstno;
+	static String address;
 	
 	public static void main(String[] args){
 		// init of the variable
@@ -19,7 +21,6 @@ class Bar123{
 		
 		 gstNo = "13132135bnh";
 		 barName= "navarang ";
-		 gstNo = " thfjgkgbj,kg";
 		 address =" rajajinagara";
 		System.out.println("----------------------------");
 		 System.out.println("GST NO " + gstNo);
