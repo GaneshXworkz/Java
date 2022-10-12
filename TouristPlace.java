@@ -22,5 +22,19 @@ class TouristPlace{
 			}
 		
 		}
+		
+		public static void findTouristPlaceNames(String touristPlaceName){
+			System.out.println("inside find Tourist PlaceNames");
+			for(int i=0 ;touristPlaceNames.length>i;i++){
+				if(beachName !=null && touristPlaceNames[i]=touristPlaceName){
+					String ref= touristPlaceName[i];
+					System.out.println("tourist PlaceName" +ref);
+				}else {
+					System.out.println("Error");
+				}
+				
+				
+			}
+		}
 
 }
