@@ -27,7 +27,7 @@ public class Hospital {
 		}
 		}	
 		else {
-			System.out.println("treatment is not required go to home...");
+			System.out.println("treatment is not required....");
 		}
 		return isAdmitted;
 	}

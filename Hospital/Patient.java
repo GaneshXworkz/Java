@@ -1,12 +1,70 @@
 package com.xworkz.Hospital;
 
-public class Patient extends Hospital{
+public class Patient{
 	
-	public String name;
-	public int age;
-	public Gender gender;
-	public String address;
+	//grouping data into single block as called as Encpsulation;
 	
+	private String name;
+	public String getName() {
+		return name;
+	}
+
+
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+
+
+	private int age;
+	private Gender gender;
+	private String address;
+	
+	public int getAge() {
+		return age;
+	}
+
+
+
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+
+
+
+	public Gender getGender() {
+		return gender;
+	}
+
+
+
+
+	public void setGender(Gender gender) {
+		this.gender = gender;
+	}
+
+
+
+
+	public String getAddress() {
+		return address;
+	}
+
+
+
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+
+
+
 	public Patient(String name,int age,Gender gender,String address) {
 		this.name=name;
 		this.age=age;
@@ -14,6 +72,8 @@ public class Patient extends Hospital{
 		this.address=address;
 		
 	}
+	
+
 	
 
 	public void displyInfo() {

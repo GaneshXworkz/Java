@@ -8,26 +8,67 @@ public class ApooloTest {
 
 	public static void main(String[] args) {
 		
-	
-		Scanner scanner=new Scanner(System.in);
+		Scanner sc=new Scanner(System.in);
 		System.out.println("enter the Size");
-		int size =scanner.nextInt();
+		int size =sc.nextInt();
 		
-		AppoloHospital appolo=new AppoloHospital(size);
-		Patient patient= new Patient( "prasad",25,Gender.male,"bellary");
-		patient.name = "prasad";
-		patient.age=25;
-		patient.address="bellary";
-		patient.gender=Gender.male;
+		AppoloHospital appoloHospital = new AppoloHospital(size);
 		
 		
-		appolo.addPatient(patient);
-		appolo.getAllPatients();
+		
+		for(int i=0;i<size;i++) {
+			
+		Patient patient =new Patient(null, size, null, null);
+		
+		System.out.println("enter patient name");
+		patient.setName(sc.next());
+		
+		System.out.println("enter patient age ");
+		patient.setAge(sc.nextInt());
+		
+		System.out.println("enter patient gender ");	
+		String gender=sc.next();
+		patient.setGender(Gender.valueOf(gender));
 		
 		
-		scanner.close();
+		System.out.println("enter patient Address ");
+		patient.setAddress(sc.next());
 		
 		
+		appoloHospital.addPatient(patient);
+		
+
+		
+
+		}
+		
+		//appoloHospital.getAllPatients();
+
+		
+		System.out.println("Get Patient Detailes by name");
+		appoloHospital.getPatientByName(sc.next());
+		
+	
+		System.out.println("Get Patient Detailes by age");
+		appoloHospital.getPatientbyAge(sc.nextInt());
+		
+		
+		System.out.println("Get Patient Detailes by gender");
+		appoloHospital.getGenderBygenderName(sc.next());
+		
+		System.out.println("Get Patient Detailes by Address");
+		appoloHospital.getPatientbyAddress(sc.next());
+		
+		
+		System.out.println("Get Patient Gender by using Name");
+		appoloHospital.getGenderBygenderName(sc.next());;
+
+		System.out.println("Get Patient Name by using Gender");
+		appoloHospital.getGenderBygenderName(sc.next());
+		
+
+		
+	sc.close();	
 	}
 
 }
