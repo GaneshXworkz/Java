@@ -7,7 +7,7 @@ public interface HospitalContract {
 	public void getPatientDetailsByname(String name);
 	public void getPatientDetailsByAge(int age);
 	public void getPatientDetailsByAddress(String address);
-	
+
 	
 	
 }
