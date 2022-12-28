@@ -7,8 +7,6 @@ import java.util.Iterator;
 public class Dams {
 	
 	
-
-	@SuppressWarnings("unlikely-arg-type")
 	public static void main(String[] args) {
 		
 		Collection<String> andhraPradesh=new ArrayList<String>();
@@ -224,18 +222,22 @@ public class Dams {
    		
    		Iterator<String> ref8=Dam.iterator();
    		
-        while(ref8.hasNext()) {
-        	
+        while(ref8.hasNext()) 
+        {
         	String element=ref8.next();
+        	
         	StringBuilder element1= new StringBuilder();
         
         	element1.reverse();
         	
         	String pop =element1.toString();
         	
-        	if(element.equals(pop)) {
+        	if(element.equals(pop)) 
+        	{
         		System.out.println("Plindrome : " +pop);
-        	}else {
+        	}
+        	else
+        	{
         		System.out.println("not palindrome : "+pop );
         	}
         	
