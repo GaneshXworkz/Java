@@ -3,15 +3,13 @@ package com.xworkz.Collection.CompareToAndStream;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class MovieDTO implements Comparable<MovieDTO>{
-	
+public class MovieDTO implements Comparable<MovieDTO> {
+
 	private String name;
 	private double budget;
 	private String date;
 	private String language;
 	private double prize;
-	
-	
 
 	public MovieDTO() {
 		super();
@@ -25,14 +23,14 @@ public class MovieDTO implements Comparable<MovieDTO>{
 
 	@Override
 	public boolean equals(Object obj) {
-		if(obj!=null) {
-			if(obj instanceof Object) {
-			
-				MovieDTO ref=(MovieDTO)obj;
-				if(ref.name.equals(this.name)&& ref.language.equals(this.language)) {
+		if (obj != null) {
+			if (obj instanceof Object) {
+
+				MovieDTO ref = (MovieDTO) obj;
+				if (ref.name.equals(this.name) && ref.language.equals(this.language)) {
 					return true;
 				}
-				
+
 			}
 		}
 		return false;
@@ -92,20 +90,23 @@ public class MovieDTO implements Comparable<MovieDTO>{
 	public void setPrize(double prize) {
 		this.prize = prize;
 	}
-	
-	//Asending Order
-	
-	/*
-	 * public int compareTo(MovieDTO o) {
-	 * 
-	 * return this.name.compareTo(o.name); }
-	 */
-	
+
+	// Asending Order
+
 	@Override
 	public int compareTo(MovieDTO o) {
-		
-		return (int) (this.budget - o.budget);
+
+		return o.name.compareTo(this.name);
 	}
-	
+
+	/*
+	 * @Override 
+	 * 
+	 * public int compareTo(MovieDTO o)
+	 *  {
+	 * 
+	 * return (int) (o.budget - this.budget); 
+	 * }
+	 */
 
 }
