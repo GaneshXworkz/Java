@@ -2,7 +2,6 @@ package com.xworkz.Collection.CompareToAndStream;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.stream.Collectors;
 
@@ -41,8 +40,9 @@ public class WeaponTest {
 		System.out.println("------------------------------------------------------------");
 		ref
 		.stream()
+		
 		.filter(ref2->ref2.getPrize()>30000.00)
-		.collect(Collectors.toSet())
+		.sorted((a1,a2)->Double.compare(a2.getPrize(),a1.getPrize()))
 		.forEach(ref1->System.out.println(ref1));
 		
 		System.out.println("2 .Find and Print All Weapon made By And Made On");
@@ -60,7 +60,6 @@ public class WeaponTest {
 		ref
 		.stream()
 		.sorted()
-		.collect(Collectors.toSet())
 		.forEach(ref1->System.out.println(ref1));
 		
 		
@@ -85,6 +84,13 @@ public class WeaponTest {
 		System.out.println("------------------------------------------------------------");
 	
 		
+		Comparator<WeaponDTO> comparator = (a1,a2)->Double.compare(a2.getPrize(),a1.getPrize());
+		 ref
+		.stream()
+		.sorted(comparator).forEach(a->System.out.println(a.getPrize()));
+		
+		System.out.println("7 . Print All Weapon Sort by prize");
+		System.out.println("------------------------------------------------------------");
 
 		
 				

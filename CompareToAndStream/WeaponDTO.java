@@ -1,18 +1,16 @@
 package com.xworkz.Collection.CompareToAndStream;
 
-import java.util.Objects;
+public class WeaponDTO implements Comparable<WeaponDTO> {
 
-public class WeaponDTO implements Comparable<WeaponDTO>{
-	
 	private String name;
 	private String madeBY;
 	private String madeOn;
-	private double prize;
+	private Double prize;
 	private Type type;
-	
+
 	public WeaponDTO() {
 		super();
-		
+
 	}
 
 	public WeaponDTO(String name, String madeBY, String madeOn, double prize, Type type) {
@@ -37,26 +35,24 @@ public class WeaponDTO implements Comparable<WeaponDTO>{
 
 	@Override
 	public boolean equals(Object obj) {
-		if(obj!=null) 
-		{
-			if(obj instanceof WeaponDTO)
-			{
-				WeaponDTO ref=(WeaponDTO)obj;
-				if(ref.name.equals(this.name)) 
-				{
+		if (obj != null) {
+			if (obj instanceof WeaponDTO) {
+				WeaponDTO ref = (WeaponDTO) obj;
+				if (ref.name.equals(this.name)) {
 					return true;
 				}
 			}
 		}
 		return false;
 	}
-	
-   public int compareTo(WeaponDTO o) {
-	   
-	   return o.name.compareTo(this.name);
-	   
-   }
-   
+
+	@Override
+	public int compareTo(WeaponDTO o) {
+
+		return o.name.compareTo(this.name);
+
+	}
+
 	/*
 	 * public int compareTo1(WeaponDTO b) {
 	 * 
@@ -64,45 +60,44 @@ public class WeaponDTO implements Comparable<WeaponDTO>{
 	 * 
 	 * }
 	 */
-public String getName() {
-	return name;
-}
+	public String getName() {
+		return name;
+	}
 
-public String getMadeBY() {
-	return madeBY;
-}
+	public String getMadeBY() {
+		return madeBY;
+	}
 
-public String getMadeOn() {
-	return madeOn;
-}
+	public String getMadeOn() {
+		return madeOn;
+	}
 
-public double getPrize() {
-	return prize;
-}
+	public double getPrize() {
+		return prize;
+	}
 
-public Type getType() {
-	return type;
-}
+	public Type getType() {
+		return type;
+	}
 
-public void setName(String name) {
-	this.name = name;
-}
+	public void setName(String name) {
+		this.name = name;
+	}
 
-public void setMadeBY(String madeBY) {
-	this.madeBY = madeBY;
-}
+	public void setMadeBY(String madeBY) {
+		this.madeBY = madeBY;
+	}
 
-public void setMadeOn(String madeOn) {
-	this.madeOn = madeOn;
-}
+	public void setMadeOn(String madeOn) {
+		this.madeOn = madeOn;
+	}
 
-public void setPrize(double prize) {
-	this.prize = prize;
-}
+	public void setPrize(double prize) {
+		this.prize = prize;
+	}
 
-public void setType(Type type) {
-	this.type = type;
-} 
-	
+	public void setType(Type type) {
+		this.type = type;
+	}
 
 }
